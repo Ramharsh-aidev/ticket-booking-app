@@ -52,10 +52,7 @@ env/            # Another alternative name for venv directory
 .history/       # VS Code Local History
 .ipynb_checkpoints/ # Jupyter notebooks
 
-# Environment variables file
-.env           # Contains sensitive credentials
-
-
 # Operating System files
 .DS_Store       # macOS
 Thumbs.db       # Windows
+.env
