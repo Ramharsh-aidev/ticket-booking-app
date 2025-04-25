@@ -74,6 +74,8 @@ The entire application environment, including the database, is containerized usi
 
 ![Screenshot 2025-04-25 152857](https://github.com/user-attachments/assets/32869968-0bce-4533-90b1-4b1ab6090e8e)
 
+**Jenkins**
+![image](https://github.com/user-attachments/assets/e447549e-04c5-4e2b-ba82-388675b2e2dd)
 
 
 ## Prerequisites
