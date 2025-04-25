@@ -1,21 +1,39 @@
 {% extends 'base.html' %}
 
-{% block title %}Welcome{% endblock %}
+{% block title %}Available Shows{% endblock %}
 
 {% block content %}
-    <h2>Welcome to the Ticket Booking System!</h2>
-    <p>Find and book tickets for your favorite shows and events.</p>
+    <div class="container" style="padding: 2rem;">
+        <h1 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem;">Available Shows</h1>
 
-    <p><a href="{% url 'show_list' %}">Browse all shows</a></p>
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+            <input type="text" placeholder="Search shows..." style="flex: 1; padding: 0.5rem 1rem; border: 1px solid #ccc; border-radius: 5px;">
+            <button style="background-color: #007bff; color: white; padding: 0.5rem 1rem; border: none; border-radius: 5px;">Search</button>
+        </div>
 
-    {% if user.is_authenticated %}
-        <p>Hello, {{ user.username }}!</p>
-        <p><a href="{% url 'booking_history' %}">View your booking history</a></p>
-        {% if user.is_superuser %}
-             <p><a href="{% url 'admin_dashboard' %}">Go to Admin Dashboard</a></p>
-        {% endif %}
-    {% else %}
-        <p>Please <a href="{% url 'login' %}">Login</a> or <a href="{% url 'register' %}">Register</a> to book tickets.</p>
-    {% endif %}
+        <div style="margin-bottom: 2rem;">
+            <button style="background-color: #007bff; color: white; padding: 0.4rem 1rem; border: none; border-radius: 5px;">All</button>
+            <button style="border: 1px solid #007bff; color: #007bff; background: transparent; padding: 0.4rem 1rem; border-radius: 5px;">Indian</button>
+            <button style="border: 1px solid #00bcd4; color: #00bcd4; background: transparent; padding: 0.4rem 1rem; border-radius: 5px;">Hollywood</button>
+            <button style="border: 1px solid gray; color: gray; background: transparent; padding: 0.4rem 1rem; border-radius: 5px;">Other</button>
+        </div>
 
+        <div class="show-list" style="display: flex; flex-wrap: wrap; gap: 2rem;">
+            {# Your list of show cards will be rendered here separately #}
+            {% block show_cards %}
+            {% endblock %}
+        </div>
+
+        <div style="margin-top: 3rem;">
+            {% if user.is_authenticated %}
+                <p>Hello, {{ user.username }}!</p>
+                <p><a href="{% url 'booking_history' %}">View your booking history</a></p>
+                {% if user.is_superuser %}
+                    <p><a href="{% url 'admin_dashboard' %}">Go to Admin Dashboard</a></p>
+                {% endif %}
+            {% else %}
+                <p>Please <a href="{% url 'login' %}">Login</a> or <a href="{% url 'register' %}">Register</a> to book tickets.</p>
+            {% endif %}
+        </div>
+    </div>
 {% endblock %}
