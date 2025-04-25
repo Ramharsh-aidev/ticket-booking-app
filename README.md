@@ -163,6 +163,17 @@ This project features a custom administration panel built using standard Django 
 *   **docker-compose.yml:** Orchestrates the multi-container application. It defines two services: `web` (built from the `Dockerfile`) and `db` (using the standard `mysql:8.0` image). It configures volumes for data persistence, maps ports from containers to the host, sets up environment variables from the `.env` file, and defines health checks (`depends_on: db: condition: service_healthy` ensures the web app waits for the database).
 *   **Jenkinsfile:** Provides a basic definition for a CI/CD pipeline in Jenkins. It includes stages for checking out code, building the Docker image (potentially via `docker-compose build`), a placeholder for running tests (e.g., `manage.py test` inside a container), and deploying the application via `docker compose up`. This file requires a Jenkins server configured with Docker access to be fully functional. You will need to replace `YOUR_GITHUB_REPO_URL` in the Jenkinsfile with the actual URL of your Git repository.
 
+## Using the Jenkins
+
+1.  In Jenkins, create a new **Pipeline** job.
+2.  Configure the job to fetch the pipeline script from **SCM** (Git).
+3.  Enter your repository URL (`<YOUR_GITHUB_REPO_URL>`).
+4.  Specify the branch (e.g., `main`).
+5.  Set the **Script Path** to `Jenkinsfile`.
+6.  Configure **Build Triggers** (e.g., Poll SCM to trigger builds on commits) and **Pipeline Options** as needed.
+7.  Configure **Credentials Binding** in the job settings to inject your required secret environment variables (matching the names expected by `docker-compose.yml`) into the build environment.
+8.  Save the job and trigger a build ("Build Now").
+
 ## Project Structure
 
 ```
