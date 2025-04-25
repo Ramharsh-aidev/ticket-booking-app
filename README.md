@@ -55,27 +55,24 @@ The entire application environment, including the database, is containerized usi
 
 ## Screenshots & Demo GIF
 
-<!-- Add your screenshots and GIF here! -->
-<!-- Suggestions: Homepage, Show List, Show Detail (with booking form), Registration, Login, Booking History, Admin Login, Admin Dashboard, Admin Show List, Admin Create/Edit Show, Admin Booking List -->
+**Homepage:**
+![photo1](https://github.com/user-attachments/assets/a2a80f00-a63c-46d8-9797-a0eedcf11298)
 
-<!-- Example Placeholder: -->
-<!-- **Homepage:** -->
-<!-- ![Homepage Screenshot](link/to/your/homepage_screenshot.png) -->
+**Cart:**
+![image](https://github.com/user-attachments/assets/e9f669b9-f8d1-47b7-81b4-a83d32a61b27)
 
-<!-- **Show List:** -->
-<!-- ![Show List Screenshot](link/to/your/showlist_screenshot.png) -->
+**Seat Select**
+![HELLO](https://github.com/user-attachments/assets/8a5d746f-877b-4732-b5b4-58a0418fc70b)
 
-<!-- **Booking History:** -->
-<!-- ![Booking History Screenshot](link/to/your/bookinghistory_screenshot.png) -->
+**Booking Confirmation**
+![part](https://github.com/user-attachments/assets/e8db9abf-9473-4b44-b72e-719f3a28fad5)
 
-<!-- **Admin Dashboard:** -->
-<!-- ![Admin Dashboard Screenshot](link/to/your/admindashboard_screenshot.png) -->
+**Docker:**
+![Screenshot 2025-04-25 164217](https://github.com/user-attachments/assets/f8e511f1-ed52-4b07-9e0e-c4fcbb942394)
 
-<!-- **Admin Show Create:** -->
-<!-- ![Admin Show Create Screenshot](link/to/your/adminshowcreate_screenshot.png) -->
+![Screenshot 2025-04-25 152857](https://github.com/user-attachments/assets/32869968-0bce-4533-90b1-4b1ab6090e8e)
 
-<!-- **Demo GIF:** -->
-<!-- ![App Demo GIF](link/to/your/demo.gif) -->
+
 
 ## Prerequisites
 
